@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/tchase/Documents/repos/flyte_demo/wine-classification/workflows/mlruns/1/c3ee4f34491c4b3a9510076951259cf4/artifacts
+end_time: 1714355695316
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: c3ee4f34491c4b3a9510076951259cf4
+run_name: persistent-ox-427
+run_uuid: c3ee4f34491c4b3a9510076951259cf4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1714355694140
+status: 3
+tags: []
+user_id: tchase

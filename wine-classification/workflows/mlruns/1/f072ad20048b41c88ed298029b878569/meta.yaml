@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/tchase/Documents/repos/flyte_demo/wine-classification/workflows/mlruns/1/f072ad20048b41c88ed298029b878569/artifacts
+end_time: 1714354797370
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: f072ad20048b41c88ed298029b878569
+run_name: defiant-gnat-165
+run_uuid: f072ad20048b41c88ed298029b878569
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1714354796144
+status: 3
+tags: []
+user_id: tchase

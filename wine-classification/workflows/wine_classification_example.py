@@ -7,21 +7,26 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, mean_absolute_error
 from flytekit import task, workflow
 # import seaborn as sns
-# from flytekitplugins.mlflow import mlflow_autolog
-import mlflow
+
 from typing import List, Tuple, Dict
 from flytekit import ImageSpec
 
 sklearn_image_spec = ImageSpec(
-    packages=["mlflow"]
+    base_image="ghcr.io/flyteorg/flytekit:py3.8-1.6.2",
+    packages=["mlflow", "flytekitplugins-mlflow"],
+    registry="localhost:30000"    
 )
 
-@task(container_image=sklearn_image_spec)
+if sklearn_image_spec.is_container():
+    import mlflow
+    from flytekitplugins.mlflow import mlflow_autolog
+
+@task()
 def get_data() -> pd.DataFrame:
     """Get the wine dataset."""
     return load_wine(as_frame=True).frame
 
-@task(container_image=sklearn_image_spec)
+@task()
 def process_data(data: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame]:
     """Simplify the task from a 3-class to a binary classification problem."""
     data_out = data.assign(target=lambda x: x["target"].where(x["target"] == 0, 1))
@@ -35,7 +40,7 @@ def process_data(data: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataFrame, pd.Dat
     return train_x, test_x, train_y, test_y
     
 @task(container_image=sklearn_image_spec)
-# @mlflow_autolog(framework=mlflow.sklearn)
+@mlflow_autolog(framework=mlflow.sklearn)
 def train_model(
     train_x: pd.DataFrame, 
     test_x: pd.DataFrame, 
@@ -54,7 +59,7 @@ def train_model(
     return mse, mae, lr
 
 
-@task(container_image=sklearn_image_spec)
+@task()
 def training_model_loop(
     train_x: pd.DataFrame, 
     test_x: pd.DataFrame, 

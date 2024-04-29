@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/tchase/Documents/repos/flyte_demo/wine-classification/workflows/mlruns/1/841f9f728607464896a49d5593fd3a10/artifacts
+end_time: 1714355696622
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: 841f9f728607464896a49d5593fd3a10
+run_name: vaunted-sponge-705
+run_uuid: 841f9f728607464896a49d5593fd3a10
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1714355695377
+status: 3
+tags: []
+user_id: tchase

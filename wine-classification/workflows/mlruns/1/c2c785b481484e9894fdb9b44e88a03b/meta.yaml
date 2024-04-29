@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/tchase/Documents/repos/flyte_demo/wine-classification/workflows/mlruns/1/c2c785b481484e9894fdb9b44e88a03b/artifacts
+end_time: 1714354794777
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: c2c785b481484e9894fdb9b44e88a03b
+run_name: bold-squirrel-990
+run_uuid: c2c785b481484e9894fdb9b44e88a03b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1714354792904
+status: 3
+tags: []
+user_id: tchase
