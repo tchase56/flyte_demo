@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/tchase/Documents/repos/flyte_demo/wine-classification/workflows/mlruns/1/ab9b798536d0451f8c30605baec310d2/artifacts
+end_time: 1714365624694
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: ab9b798536d0451f8c30605baec310d2
+run_name: secretive-yak-137
+run_uuid: ab9b798536d0451f8c30605baec310d2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1714365623302
+status: 3
+tags: []
+user_id: tchase

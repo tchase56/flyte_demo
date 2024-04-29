@@ -11,22 +11,24 @@ from flytekit import task, workflow
 from typing import List, Tuple, Dict
 from flytekit import ImageSpec
 
+import mlflow
+from flytekitplugins.mlflow import mlflow_autolog
+
 sklearn_image_spec = ImageSpec(
     base_image="ghcr.io/flyteorg/flytekit:py3.8-1.6.2",
     packages=["mlflow", "flytekitplugins-mlflow"],
     registry="localhost:30000"    
 )
 
-if sklearn_image_spec.is_container():
-    import mlflow
-    from flytekitplugins.mlflow import mlflow_autolog
+# if sklearn_image_spec.is_container():
 
-@task()
+
+@task(container_image=sklearn_image_spec)
 def get_data() -> pd.DataFrame:
     """Get the wine dataset."""
     return load_wine(as_frame=True).frame
 
-@task()
+@task(container_image=sklearn_image_spec)
 def process_data(data: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame]:
     """Simplify the task from a 3-class to a binary classification problem."""
     data_out = data.assign(target=lambda x: x["target"].where(x["target"] == 0, 1))
@@ -59,7 +61,7 @@ def train_model(
     return mse, mae, lr
 
 
-@task()
+@task(container_image=sklearn_image_spec)
 def training_model_loop(
     train_x: pd.DataFrame, 
     test_x: pd.DataFrame, 
