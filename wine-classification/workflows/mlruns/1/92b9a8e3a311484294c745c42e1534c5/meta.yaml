@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/tchase/Documents/repos/flyte_demo/wine-classification/workflows/mlruns/1/92b9a8e3a311484294c745c42e1534c5/artifacts
+end_time: 1714338971937
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: 92b9a8e3a311484294c745c42e1534c5
+run_name: monumental-crab-471
+run_uuid: 92b9a8e3a311484294c745c42e1534c5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1714338970785
+status: 3
+tags: []
+user_id: tchase

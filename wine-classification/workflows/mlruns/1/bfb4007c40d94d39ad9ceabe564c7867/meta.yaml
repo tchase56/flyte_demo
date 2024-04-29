@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/tchase/Documents/repos/flyte_demo/wine-classification/workflows/mlruns/1/bfb4007c40d94d39ad9ceabe564c7867/artifacts
+end_time: 1714321786469
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: bfb4007c40d94d39ad9ceabe564c7867
+run_name: industrious-eel-414
+run_uuid: bfb4007c40d94d39ad9ceabe564c7867
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1714321784292
+status: 3
+tags: []
+user_id: tchase

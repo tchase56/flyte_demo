@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/tchase/Documents/repos/flyte_demo/wine-classification/workflows/mlruns/1/393c475dd6ae47e8b38f7f421387bbc0/artifacts
+end_time: 1714164129780
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: 393c475dd6ae47e8b38f7f421387bbc0
+run_name: fearless-squid-199
+run_uuid: 393c475dd6ae47e8b38f7f421387bbc0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1714164129771
+status: 4
+tags: []
+user_id: tchase

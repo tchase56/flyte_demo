@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/tchase/Documents/repos/flyte_demo/wine-classification/workflows/mlruns/1/d728c6956dc143b3bd47681be44f941c/artifacts
+end_time: 1714336969101
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: d728c6956dc143b3bd47681be44f941c
+run_name: rumbling-croc-944
+run_uuid: d728c6956dc143b3bd47681be44f941c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1714336967954
+status: 3
+tags: []
+user_id: tchase

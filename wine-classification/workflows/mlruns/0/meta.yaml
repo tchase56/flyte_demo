@@ -1,0 +1,6 @@
+artifact_location: file:///Users/tchase/Documents/repos/flyte_demo/wine-classification/workflows/mlruns/0
+creation_time: 1714163416558
+experiment_id: '0'
+last_update_time: 1714163416558
+lifecycle_stage: active
+name: Default

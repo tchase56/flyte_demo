@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/tchase/Documents/repos/flyte_demo/wine-classification/workflows/mlruns/1/7e6d4450369d41f0a7e6c6c1b4cc0f8a/artifacts
+end_time: 1714321790312
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: 7e6d4450369d41f0a7e6c6c1b4cc0f8a
+run_name: learned-robin-539
+run_uuid: 7e6d4450369d41f0a7e6c6c1b4cc0f8a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1714321789080
+status: 3
+tags: []
+user_id: tchase

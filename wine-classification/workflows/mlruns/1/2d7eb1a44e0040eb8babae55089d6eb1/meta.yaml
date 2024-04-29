@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/tchase/Documents/repos/flyte_demo/wine-classification/workflows/mlruns/1/2d7eb1a44e0040eb8babae55089d6eb1/artifacts
+end_time: 1714349356100
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: 2d7eb1a44e0040eb8babae55089d6eb1
+run_name: marvelous-boar-404
+run_uuid: 2d7eb1a44e0040eb8babae55089d6eb1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1714349354952
+status: 3
+tags: []
+user_id: tchase

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/tchase/Documents/repos/flyte_demo/wine-classification/workflows/mlruns/1/62a225c684964ce0b667b347c55d2f8c/artifacts
+end_time: 1714321787764
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: 62a225c684964ce0b667b347c55d2f8c
+run_name: respected-cow-708
+run_uuid: 62a225c684964ce0b667b347c55d2f8c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1714321786581
+status: 3
+tags: []
+user_id: tchase

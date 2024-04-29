@@ -5,7 +5,12 @@
 * conda create -n flyte_env python=3.9
 * conda activate flyte_env
 * conda install pandas
-* pip install -U flytekit
+* conda install scikit-learn=1.2.2
+* conda install matplotlib
+* conda install mlflow
+* pip install flytekit
+* pip install flytekitplugins-mlflow
+* pip install flytekitplugins-envd
 
 ## run hello world example 
 
@@ -17,6 +22,7 @@
 * create flyte-ready projects (from flyte github templates)
     * pyflyte init --template basic_template-dockerfile basic_template
     * pyflyte init --template wine-classification wine-classification
+        * this was modified to create the repo in the reference repository
 
 ## basic_template example
 
@@ -63,10 +69,11 @@
 ![screenshot](images/solution_to_port_error.png)
 
 * create a project on the demo cluster to correspond to your local Flyte project
-    * flytectl create project \
-    --id "my-project" \
-    --labels "my-label=my-project" \
-    --description "My Flyte project" \
+    * flytectl config init
+    * flytectl create project \\ \
+    --id "my-project" \\ \
+    --labels "my-label=my-project" \\ \
+    --description "My Flyte project" \\ \
     --name "My project"
 * Run the workflow on the Flyte cluster with pyflyte run using the --remote flag and additional parameters for the project name and domain. In this example, you can also optionally pass a name parameter to the workflow:
     * pyflyte run --remote -p my-project -d development example.py wf --name Ada
@@ -91,10 +98,7 @@
 
 * timeline view
 
-![Screenshot](images/timeline_view_flyte)
-
-
-
+![Screenshot](images/timeline_view_flyte.png)
 
 
 references
@@ -102,3 +106,23 @@ references
     * https://cookiecutter.readthedocs.io/en/1.7.2/first_steps.html
 * flyte
     * https://docs.flyte.org/en/latest/introduction.html
+    * mlflow
+        * https://docs.flyte.org/en/latest/flytesnacks/examples/mlflow_plugin/index.html
+        * https://docs.flyte.org/en/latest/flytesnacks/examples/mlflow_plugin/mlflow_example.html
+    * https://flyte.org/integrations
+
+
+
+## helpful commands
+
+* conda remove -n flyte_env --all
+* bash ./docker_build.sh
+* flytectl demo start --image basic_template:f335aaa22bbaba4884a4c3d931a994c1a2f9ed9c
+* pyflyte run wine_classification_example.py training_workflow 
+* pyflyte run --remote -p my-project-wine-10 -d development wine_classification_example.py training_workflow
+
+* flytectl demo teardown
+* pip list --format=freeze > requirements.txt
+* https://github.com/flyteorg/flytelab/blob/main/README.md
+* docker image build -t test_image .
+* flytectl demo start --image test_image

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/tchase/Documents/repos/flyte_demo/wine-classification/workflows/mlruns/1/be808f05b85940f59ed5e79e20009c6a/artifacts
+end_time: 1714336970402
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: be808f05b85940f59ed5e79e20009c6a
+run_name: sincere-stork-525
+run_uuid: be808f05b85940f59ed5e79e20009c6a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1714336969160
+status: 3
+tags: []
+user_id: tchase
