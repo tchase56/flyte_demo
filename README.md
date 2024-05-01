@@ -100,6 +100,11 @@
 
 ![Screenshot](images/timeline_view_flyte.png)
 
+## Hyperparameter tuning example with MLFlow Plugin
+
+* clone the demo repository
+    * https://github.com/tchase56/flyte_demo
+
 
 references
 * cookiecutter python project
@@ -110,6 +115,8 @@ references
         * https://docs.flyte.org/en/latest/flytesnacks/examples/mlflow_plugin/index.html
         * https://docs.flyte.org/en/latest/flytesnacks/examples/mlflow_plugin/mlflow_example.html
     * https://flyte.org/integrations
+* demo repo
+    * https://github.com/tchase56/flyte_demo
 
 
 
@@ -126,3 +133,8 @@ references
 * https://github.com/flyteorg/flytelab/blob/main/README.md
 * docker image build -t test_image .
 * flytectl demo start --image test_image
+
+
+
+* envd context create --name flyte-sandbox --builder tcp --builder-address localhost:30000 --use
+* 
