@@ -104,6 +104,46 @@
 
 * clone the demo repository
     * https://github.com/tchase56/flyte_demo
+* note: for this current version to work I had to switch from rancher desktop to docker desktop
+* start the docker daemon
+    * open docker desktop
+* start the demo cluster
+    * flytectl demo start
+    * if you encounter an error look at the "run on local cluster" section above
+* navigate to the folder containing wine_classification_hyperparameter_search.py
+* run the "training_workflow()" workflow in wine_classification_hyperparameter_search.py
+    * pyflyte run --remote wine_classification_hyperparameter_search.py training_workflow
+    * this file uses ImageSpec for image creation
+        * it uses a flyte docker container as a base image and installs libraries in it directly from in the code of the workflow
+    * this file uses the mlflow_autolog
+        * this decorator automatically logs parameters from the sklearn experiment
+
+### UI
+
+* nodes view
+
+![Screenshot](images/hype_node_view.png)
+
+* graph view
+
+![Screenshot](images/hype_graph_view.png)
+
+### Flyte Deck (hyperparameter search task)
+* mlflow metrics
+
+![Screenshot](images/hype_mlflow_metrics.png)
+
+* mlflow params
+
+![Screenshot](images/hype_mlflow_params.png)
+
+* input
+
+![Screenshot](images/hype_input_task.png)
+
+* output
+
+![Screenshot](images/hype_output_task.png)
 
 
 references

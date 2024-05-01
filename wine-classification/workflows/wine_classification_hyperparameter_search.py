@@ -32,7 +32,7 @@ def process_data(data: pd.DataFrame) -> pd.DataFrame:
 
 @task(enable_deck=True, container_image=sklearn_image_spec)
 @mlflow_autolog(framework=mlflow.sklearn)
-def training_model_loop(
+def hyperparameter_search(
     data: pd.DataFrame,
 ) -> Tuple[LogisticRegression, pd.DataFrame]:
 
@@ -45,15 +45,17 @@ def training_model_loop(
     return grid_search.best_estimator_, pd.DataFrame(grid_search.cv_results_)
 
 @workflow
-def training_workflow() -> None:
+def training_workflow() -> Tuple[LogisticRegression, pd.DataFrame]:
     """Put all of the steps together into a single workflow."""
     # raise Exception("This is a test")
     data = get_data()
     data = process_data(data=data)
 
-    training_model_loop(
+    best_model, cv_results = hyperparameter_search(
         data = data
     )
+
+    return best_model, cv_results
 
 if __name__ == "__main__":
     training_workflow()
