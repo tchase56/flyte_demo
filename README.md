@@ -177,4 +177,4 @@ references
 
 
 * envd context create --name flyte-sandbox --builder tcp --builder-address localhost:30000 --use
-* 
+* docker system prune -a --volumes  
